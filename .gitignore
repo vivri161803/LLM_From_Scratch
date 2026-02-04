@@ -1,1 +1,2 @@
-*.pth
+Project/src/gpt_model_large.pth
+Project/.venv/
