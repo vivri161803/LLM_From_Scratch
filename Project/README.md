@@ -15,19 +15,26 @@ Questi sono tutti i file presenti in questa cartella. La cartella `/src` contien
 │   ├── GPT_DEMO.png
 │   ├── GPT_REAL.png
 │   └── wall-e.jpg
+├── pyproject.toml
 ├── README.md
 ├── slides
 │   ├── masking.png
 │   ├── model.png
 │   ├── slides_proj.md
 │   └── slides_proj.pdf
-└── src
-    ├── model.py
-    ├── trainer.py
-    └── utils.py
+├── src
+│   ├── deepscore.py
+│   ├── gpt_model_large.pth
+│   ├── live_demo.py
+│   ├── model.py
+│   ├── trainer.py
+│   ├── trainsave.py
+│   └── utils.py
+└── uv.lock
 ```
 
 ## 🛠️ Installazione e Requisiti
+
 Il codice richiede Python 3.8+ e le seguenti librerie:
 
 ```bash
@@ -46,7 +53,7 @@ Per avviare l'addestramento con la configurazione di default:
 python main.py
 ```
 
-3. Configurazione Modello
+1. Configurazione Modello
 Puoi modificare i parametri nel main.py all'interno del dizionario GPT_CONFIG. Esempio per GPU limitate:
 
 ```Python
@@ -60,7 +67,9 @@ GPT_CONFIG = {
 ```
 
 ## 📊 Monitoraggio Risultati
+
 Durante il training, verrà visualizzata una barra di avanzamento (tqdm) con la loss in tempo reale. Al termine, il sistema genererà:
+
 - loss_plot.png: Grafico dell'andamento della loss (Train vs Val).
 - gpt_model_checkpoint.pth: I pesi del modello salvati.
 - generazione Testo: Una demo di completamento partendo da un prompt predefinito.
