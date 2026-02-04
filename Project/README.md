@@ -1,3 +1,32 @@
+# Struttura della cartella
+
+Questi sono tutti i file presenti in questa cartella. La cartella `/src` contiene gli snippet di codice che sono stati utilizzati per la stesura della relazione: `CL_Relazione.ipynb`. I dati utilizzati per il training si trovano in `/data`, mentre nella cartella `/slides` troviamo la presentazione, sia in Markdown che in pdf. Lo script `main.py` orchestra tutto il codice qui presente, permettendo di allenare un modello GPT2-like, fornendone la configurazione strutturale. Tutto il codice viene attentamente commentato in `CL_Relazione.ipynb`.
+
+```bash
+├── CL_Relazione.ipynb
+├── data
+│   ├── input.txt
+│   └── moby.txt
+├── main.py
+├── plot
+│   ├── Depth_Score.png
+│   ├── GPT_BALANCED.png
+│   ├── GPT_DEEP.png
+│   ├── GPT_DEMO.png
+│   ├── GPT_REAL.png
+│   └── wall-e.jpg
+├── README.md
+├── slides
+│   ├── masking.png
+│   ├── model.png
+│   ├── slides_proj.md
+│   └── slides_proj.pdf
+└── src
+    ├── model.py
+    ├── trainer.py
+    └── utils.py
+```
+
 ## 🛠️ Installazione e Requisiti
 Il codice richiede Python 3.8+ e le seguenti librerie:
 
